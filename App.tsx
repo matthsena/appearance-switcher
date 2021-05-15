@@ -1,5 +1,5 @@
 import React from 'react';
-import { useColorScheme, Dimensions } from 'react-native';
+import { useColorScheme, Dimensions, StyleSheet } from 'react-native';
 import Theme from './src/Theme';
 import { Container } from './src/components/Container';
 import { Text } from './src/components/Text';
@@ -20,10 +20,18 @@ const App = () => {
           <Moon width={width * 0.25} height={width * 0.25} fill={'#6200ee'} />
         )}
 
-        <Text>{appearanceMode}</Text>
+        <Text style={styles.text}>Modo {appearanceMode}</Text>
       </Container>
     </Theme>
   );
 };
+
+const styles = StyleSheet.create({
+  text: {
+    fontWeight: 'bold',
+    fontSize: 24,
+    marginVertical: 16,
+  },
+});
 
 export default App;
