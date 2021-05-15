@@ -2,7 +2,15 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components/native';
 import { StatusBar, useColorScheme } from 'react-native';
 
-const lightTheme = {
+export interface ThemeProviderType {
+  colors: {
+    primary: string;
+    font: string;
+    background: string;
+  };
+}
+
+const lightTheme: ThemeProviderType = {
   colors: {
     primary: '#ff9800',
     font: '#000',
@@ -10,7 +18,7 @@ const lightTheme = {
   },
 };
 
-const darkTheme = {
+const darkTheme: ThemeProviderType = {
   colors: {
     primary: '#6200ee',
     font: '#FFF',

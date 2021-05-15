@@ -1,26 +1,19 @@
 import React from 'react';
-import { Text, useColorScheme, View, StyleSheet } from 'react-native';
+import { useColorScheme } from 'react-native';
 import Theme from './src/Theme';
+import { Container } from './src/components/Container';
+import { Text } from './src/components/Text';
 
 const App = () => {
   const appearanceMode = useColorScheme();
 
   return (
     <Theme>
-      <View style={styles.container}>
+      <Container>
         <Text>{appearanceMode}</Text>
-      </View>
+      </Container>
     </Theme>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-  },
-});
 
 export default App;
